@@ -13,3 +13,15 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+
+function addClickToSquare() {
+  let squares = document.querySelectorAll(".sq-body");
+
+  squares.forEach((square) => {
+    square.addEventListener('click', () => {
+      console.log("forEach worked");
+      square.classList.toggle("sq-selected");
+    });
+  });
+}
+

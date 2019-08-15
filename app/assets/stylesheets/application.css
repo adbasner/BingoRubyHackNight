@@ -28,13 +28,24 @@
 }
 
 .square {
-  padding: 36px;
-  background-color: pink;
+  padding-top: 36px;
+  padding-bottom: 36px;
   font-size: 28px;
   text-align: center;
   align-self: center;
   height: 100px;
   width: 100px;
+}
+
+.sq-header {
+  background-color: pink;
+}
+
+.sq-body {
+  background-color: #e2e2e2;
+}
+.sq-selected, .sq-free {
+  background-color: LightSkyBlue;
 }
 
 .sq1 { grid-area: 1 / 1 / 2 / 2; } 

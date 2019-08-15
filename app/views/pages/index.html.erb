@@ -1,32 +1,36 @@
 <div class="main">
-  <div class="square sq1">B</div>
-  <div class="square sq2">I</div>
-  <div class="square sq3">N</div>
-  <div class="square sq4">G</div>
-  <div class="square sq5">O</div>
-  <div class="square sq6">A</div>
-  <div class="square sq7">A</div>
-  <div class="square sq8">A</div>
-  <div class="square sq9">A</div>
-  <div class="square sq10">A</div>
-  <div class="square sq11">A</div>
-  <div class="square sq12">A</div>
-  <div class="square sq13">A</div>
-  <div class="square sq14">A</div>
-  <div class="square sq15">A</div>
-  <div class="square sq16">A</div>
-  <div class="square sq17">A</div>
-  <div class="square sq18">A</div>
-  <div class="square sq19">A</div>
-  <div class="square sq20">A</div>
-  <div class="square sq21">A</div>
-  <div class="square sq22">A</div>
-  <div class="square sq23">A</div>
-  <div class="square sq24">A</div>
-  <div class="square sq25">A</div>
-  <div class="square sq26">A</div>
-  <div class="square sq27">A</div>
-  <div class="square sq28">A</div>
-  <div class="square sq29">A</div>
-  <div class="square sq30">A</div>
+  <div class="square sq-header sq1">B</div>
+  <div class="square sq-header sq2">I</div>
+  <div class="square sq-header sq3">N</div>
+  <div class="square sq-header sq4">G</div>
+  <div class="square sq-header sq5">O</div>
+  <div class="square sq-body sq6"><%= @b_sorted[0] %></div>
+  <div class="square sq-body sq7"><%= @i_sorted[0] %></div>
+  <div class="square sq-body sq8"><%= @n_sorted[0] %></div>
+  <div class="square sq-body sq9"><%= @b_sorted[0] %></div>
+  <div class="square sq-body sq10"><%= @o_sorted[0] %></div>
+  <div class="square sq-body sq11"><%= @b_sorted[1] %></div>
+  <div class="square sq-body sq12"><%= @i_sorted[1] %></div>
+  <div class="square sq-body sq13"><%= @n_sorted[1] %></div>
+  <div class="square sq-body sq14"><%= @b_sorted[1] %></div>
+  <div class="square sq-body sq15"><%= @o_sorted[1] %></div>
+  <div class="square sq-body sq16"><%= @b_sorted[2] %></div>
+  <div class="square sq-body sq17"><%= @i_sorted[2] %></div>
+  <div class="square sq-free sq18">Free</div>
+  <div class="square sq-body sq19"><%= @b_sorted[2] %></div>
+  <div class="square sq-body sq20"><%= @o_sorted[2] %></div>
+  <div class="square sq-body sq21"><%= @b_sorted[3] %></div>
+  <div class="square sq-body sq22"><%= @i_sorted[3] %></div>
+  <div class="square sq-body sq23"><%= @n_sorted[3] %></div>
+  <div class="square sq-body sq24"><%= @b_sorted[3] %></div>
+  <div class="square sq-body sq25"><%= @o_sorted[3] %></div>
+  <div class="square sq-body sq26"><%= @b_sorted[4] %></div>
+  <div class="square sq-body sq27"><%= @i_sorted[4] %></div>
+  <div class="square sq-body sq28"><%= @n_sorted[4] %></div>
+  <div class="square sq-body sq29"><%= @b_sorted[4] %></div>
+  <div class="square sq-body sq30"><%= @o_sorted[4] %></div>
+
+  <script type="text/javascript">
+    addClickToSquare();
+  </script>
 </div>

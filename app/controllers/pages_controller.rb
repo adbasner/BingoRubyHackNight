@@ -7,15 +7,37 @@ class PagesController < ApplicationController
     o_options=*(61..75)
 
 
-    p b_options
-    p i_options
-    p n_options
-    p g_options
-    p o_options
-    #   whil
-    # end
-    # b_options = [1, 2, 3, 4,]
+    b_picks=[]
+    i_picks=[]
+    n_picks=[]
+    g_picks=[]
+    o_picks=[]
 
+    5.times do
+      b_picks << b_options.delete_at(rand(b_options.length))
+    end
+
+    5.times do
+      i_picks << i_options.delete_at(rand(i_options.length))
+    end
+
+    5.times do
+      n_picks << n_options.delete_at(rand(n_options.length))
+    end
+
+    5.times do
+      g_picks << g_options.delete_at(rand(g_options.length))
+    end
+
+    5.times do
+      o_picks << o_options.delete_at(rand(o_options.length))
+    end
+
+    @b_sorted = b_picks.sort
+    @i_sorted = i_picks.sort
+    @n_sorted = n_picks.sort
+    @g_sorted = g_picks.sort
+    @o_sorted = o_picks.sort
 
     render 'index.html.erb'
   end
