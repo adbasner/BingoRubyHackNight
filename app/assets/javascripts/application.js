@@ -19,9 +19,31 @@ function addClickToSquare() {
 
   squares.forEach((square) => {
     square.addEventListener('click', () => {
-      console.log("forEach worked");
       square.classList.toggle("sq-selected");
     });
   });
 }
 
+function startGame() {
+  window.setInterval(() => {
+    let choice = "";
+    let letters = ["B", "I", "N", "G", "O"];
+    let letterChoice = Math.floor(Math.random() * 5);
+    let letter = letters[letterChoice];
+    let number = 0
+    if (letterChoice == 0) {
+      number = Math.floor(Math.random() * 15) + 1;
+    } else if (letterChoice == 1) {
+      number = Math.floor(Math.random() * 15) + 16;
+    } else if (letterChoice == 2) {
+      number = Math.floor(Math.random() * 15) + 31;
+    } else if (letterChoice == 3) {
+      number = Math.floor(Math.random() * 15) + 46;
+    } else if (letterChoice == 4) {
+      number = Math.floor(Math.random() * 15) + 61;
+    }
+    let announcement = document.querySelector(".sq32")
+    announcement.innerText = letter + number;
+    console.log(letter + number);
+  }, 5000);
+}
