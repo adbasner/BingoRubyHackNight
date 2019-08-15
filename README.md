@@ -1,24 +1,26 @@
-# README
+# Bingo- Ruby Hack Night
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project was started during the Chicago Ruby hack night on Jun 12th, 2019. A description of the project is located at "https://github.com/chicagoruby/hack-night-bingo"
 
-Things you may want to cover:
+Ruby version: '2.6.3'  
+Rails version: '5.2.3'
 
-* Ruby version
+## To run locally:
 
-* System dependencies
+1. Clone from https://github.com/adbasner/BingoRubyHackNight.git
+2. Run 'bundle install'
+3. Create a database 'rails db:create'
+4. Start server 'rails s'
+5. View in your favorite browser at 'localhost:3000'
 
-* Configuration
+## Web version
 
-* Database creation
+To see a deployed version on heroku, visit:
+https://bingo-ruby-hack-night.herokuapp.com/
 
-* Database initialization
+## Description
 
-* How to run the test suite
+This app could be made with any framework or language, I chose to use Ruby on Rails, mostly due to familiarity even though it might be a bit much for this project.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Click the start button.  Every 5 seconds, a letter and number combination will be called.  Click it off the board and yell bingo when you get one!
+  
