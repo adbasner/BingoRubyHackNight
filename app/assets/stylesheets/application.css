@@ -16,6 +16,7 @@
 * {
   box-sizing: border-box;
 }
+
 .main {
   width: 470px;
   margin: auto;
@@ -24,7 +25,6 @@
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr; 
   grid-column-gap: 5px;
   grid-row-gap: 5px; 
-   
 }
 
 .square {
@@ -49,7 +49,18 @@
 
 button {
   padding: 10px;
+}
+
+.sq31 {
   background-color: limegreen;
+}
+
+.sq32 {
+  background-color: lightcoral;
+}
+
+.sq33 {
+  background-color: dodgerblue;
 }
 
 .sq-header {
@@ -93,5 +104,12 @@ button {
 .sq28 { grid-area: 6 / 3 / 7 / 4; } 
 .sq29 { grid-area: 6 / 4 / 7 / 5; } 
 .sq30 { grid-area: 6 / 5 / 7 / 6; }
-.sq31 { grid-area: 7 / 1 / 8 / 6; }
-.sq32 { grid-area: 8 / 1 / 9 / 6; }
+.sq31 { grid-area: 7 / 1 / 8 / 3; }
+.sq32 { grid-area: 7 / 3 / 8 / 4; }
+.sq33 { grid-area: 7 / 4 / 8 / 6; }
+.sq34 { grid-area: 8 / 1 / 9 / 6; }
+.sq35 { grid-area: 9 / 1 / 10 / 6; }
+
+.picks {
+  background-color: #e2e2e2;
+}

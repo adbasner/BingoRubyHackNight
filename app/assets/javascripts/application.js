@@ -16,7 +16,6 @@
 
 function addClickToSquare() {
   let squares = document.querySelectorAll(".sq-body");
-
   squares.forEach((square) => {
     square.addEventListener('click', () => {
       square.classList.toggle("sq-selected");
@@ -24,26 +23,57 @@ function addClickToSquare() {
   });
 }
 
-function startGame() {
-  window.setInterval(() => {
-    let choice = "";
-    let letters = ["B", "I", "N", "G", "O"];
-    let letterChoice = Math.floor(Math.random() * 5);
-    let letter = letters[letterChoice];
-    let number = 0
-    if (letterChoice == 0) {
-      number = Math.floor(Math.random() * 15) + 1;
-    } else if (letterChoice == 1) {
-      number = Math.floor(Math.random() * 15) + 16;
-    } else if (letterChoice == 2) {
-      number = Math.floor(Math.random() * 15) + 31;
-    } else if (letterChoice == 3) {
-      number = Math.floor(Math.random() * 15) + 46;
-    } else if (letterChoice == 4) {
-      number = Math.floor(Math.random() * 15) + 61;
+function setAllAnnouncements() {
+  let announcements = [];
+  for (let i = 1; i < 76; i++) {
+    if (i >= 1 && i < 16) {
+      announcements.push("B" + i);
+    } else if  (i >= 16 && i < 31) {
+      announcements.push("I" + i);
+    } else if  (i >= 31 && i < 46) {
+      announcements.push("N" + i);
+    } else if  (i >= 46 && i < 61) {
+      announcements.push("G" + i);
+    } else if  (i >= 61 && i < 76) {
+      announcements.push("O" + i);
     }
-    let announcement = document.querySelector(".sq32")
-    announcement.innerText = letter + number;
-    console.log(letter + number);
+  }
+  return announcements;
+}
+
+function pickAnnouncemnt(announcementsAvailable) {
+  let pick = announcementsAvailable.splice(Math.floor(Math.random()*announcementsAvailable.length), 1);
+  let announcementBox = document.querySelector(".sq34");
+  let pickBox = document.querySelector(".picks");
+  pickBox.textContent += (pick + " ");
+  announcementBox.innerText = pick;
+  return announcementsAvailable;
+}
+
+function clearAllIntervals() {
+  for (var i = 1; i < 9999; i++) {
+    window.clearInterval(i);
+  }
+}
+
+function bingo() {
+  clearAllIntervals();
+  let announcementBox = document.querySelector(".sq34");
+  announcementBox.innerText = "BINGO!!!";
+}
+
+function startGame() {
+  let announcements = setAllAnnouncements();
+  announcements = pickAnnouncemnt(announcements);
+  let game = window.setInterval(() => {
+    announcements = pickAnnouncemnt(announcements);
+    if (announcements.length < 1) {
+      bingo();
+    }
   }, 5000);
+}
+
+function resetBoard() {
+  clearAllIntervals();
+  location.reload();
 }
